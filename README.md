@@ -29,7 +29,7 @@ ___
   - npm is an online repository for the publishing of open-source Node.js projects and a command-line utility for interacting with said repository that aids in package installation, version management, and dependency management.
 
 - **Explain about the Event Loop in JavaScript, including terms like; blocking, non-blocking, event loop, callback queue and "other" API's. Make sure to include why this is relevant for us as developers.**
-  - asd
+  - asddasdas
 
 - **What does it mean if a method in nodes API's ends with xxxxxxSync?**
   - asd
