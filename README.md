@@ -156,11 +156,10 @@ ___
 ___
 ## Callbacks, Promises and async/await:
 
-**Explain about (ES-6) promises in JavaScript including, the problems they solve, a quick explanation of the Promise API and:**
-  - asd
+Explain about (ES-6) promises in JavaScript including, the problems they solve, a quick explanation of the Promise API and:
 
 - **Example(s) that demonstrate how to implement our own promise-solutions.**
-  - asd
+  - Making of [myPromise.js](https://github.com/AlexanderPihl/4sem-fullstack-flow1/blob/main/Week3-18-02-2021/BeforeClass/promise-async-await-lecture/myPromise.js) used in [async1.js](https://github.com/AlexanderPihl/4sem-fullstack-flow1/blob/main/Week3-18-02-2021/BeforeClass/promise-async-await-lecture/async1.js)
 
 - **Example(s) that demonstrate error handling with promises**
   - asd
