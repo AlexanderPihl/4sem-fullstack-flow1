@@ -3,10 +3,10 @@ ___
 
 # Period-1 Vanilla JavaScript, Es-next, Node.js, Babel + Webpack and TypeScript-1
 
-## Explain and Reflect:
+## Explain and Reflect
 ___
 ### Explain the differences between Java and JavaScript + node. Topics you could include:
-___
+
   - Java is a compiled language and JavaScript a scripted language.
 
   - Java is an object oriented programming language and JavaScript is an object based scripting language.
@@ -22,14 +22,20 @@ ___
     Example a "var a" variable can store the value of any data-type.
 
   - **Blocking vs. non-blocking:**
-    - Blocking refers to operations that block further execution until that operation finishes while non-blocking refers to code that doesn’t block execution. Java is a blocking type language where Javascript is not.
+    - Blocking refers to operations that block further execution until that operation finishes while non-blocking refers to code that doesn’t block execution. Java is a blocking type language where JavaScript is not.
 
 - **Explain generally about node.js, when it “makes sense” and npm, and how it “fits” into the node echo system.**
   - node.js is an open source server enviroment, runs on various platforms, uses JavaScript on the server and is a asynchronous programming language.
   - npm is an online repository for the publishing of open-source Node.js projects and a command-line utility for interacting with said repository that aids in package installation, version management, and dependency management.
 
 - **Explain about the Event Loop in JavaScript, including terms like; blocking, non-blocking, event loop, callback queue and "other" API's. Make sure to include why this is relevant for us as developers.**
-  - asddasdas
+  - The event loop continuously checks the call stack to see if there's any function that needs to run. While doing so, it adds any function call it finds to the call stack and executes each one in order.
+  - Heap - Objects are allocated in a heap which is just a name to denote a large mostly unstructured region of memory
+  - Stack - This represents the single thread provided for JavaScript code execution. Function calls form a stack of frames (more on this below)
+  - Any JavaScript code that takes too long to return back control to the event loop will block the execution of any JavaScript code in the page, even block the UI thread, and the user cannot click around, scroll the page, and so on.
+  Almost all the I/O primitives in JavaScript are non-blocking. Network requests, Node.js filesystem operations, and so on. Being blocking is the exception, and this is why JavaScript is based so much on callbacks, and more recently on promises and async/await.
+  - Browser or Web APIs are built into your web browser, and are able to expose data from the browser and surrounding computer environment and do useful complex things with it. They are not part of the JavaScript language itself, rather they are built on top of the core JavaScript language, providing you with extra superpowers to use in your JavaScript code.
+
 
 - **What does it mean if a method in nodes API's ends with xxxxxxSync?**
   - asd
@@ -38,10 +44,18 @@ ___
   - asd
 
 - **Explain (some) of the purposes with the tools Babel and WebPack and how they differ from each other. Use examples from the exercises.**
-  - asd
+  - Babel:
+    - JavaScript compiler that converts ECMAScript 2015+ nto a backwards compatible version of JavaScript in current and older browsers or environments.
+    - It does the following:
+      - Transform syntax
+      - Polyfill features that are missing in your target environment (through @babel/polyfill)
+      - Source code transformations (codemods)
+  - Webpack:
+    - is a module bundler that bundles your code into 1 or 2 files that you define. It also compiles TypeScript to JavaScript. You need a webpack config file to handle your configurations. 
 
-### Explain using sufficient code examples the following features in JavaScript (and node)
 ___
+## Explain using sufficient code examples the following features in JavaScript (and node):
+
 - **Variable/function-Hoisting**
   - asd
 
@@ -74,8 +88,9 @@ ___
 - **Explain and demonstrate, how to implement event-based code, how to emit events and how to listen for such events**
   - asd
 
-### ES6,7,8,ES-next and TypeScript
 ___
+## ES6,7,8,ES-next and TypeScript:
+
 - **Provide examples with es-next, running in a browser, using Babel and Webpack**
   - asd
 
@@ -91,8 +106,9 @@ ___
 - **Explain the ECMAScript Proposal Process for how new features are added to the language (the TC39 Process)**
   - asd
 
-### Callbacks, Promises and async/await
 ___
+## Callbacks, Promises and async/await:
+
 **Explain about (ES-6) promises in JavaScript including, the problems they solve, a quick explanation of the Promise API and:**
   - asd
 
