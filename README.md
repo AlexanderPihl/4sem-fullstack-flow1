@@ -77,14 +77,30 @@ In the web development, you don’t usually use the engine directly. The JavaScr
 
 
 - **Explain (some) of the purposes with the tools Babel and WebPack and how they differ from each other. Use examples from the exercises.**
-  - Babel:
-    - JavaScript compiler that converts ECMAScript 2015+ nto a backwards compatible version of JavaScript in current and older browsers or environments.
+ - Babel:
+    - JavaScript compiler that converts ECMAScript 2015+ into a backwards compatible version of JavaScript in current and older browsers or environments.
     - It does the following:
       - Transform syntax
       - Polyfill features that are missing in your target environment (through @babel/polyfill)
       - Source code transformations (codemods)
+
+    To make a babel file you write .babelrc or babel.config.json
+**Example on how it would look like:**
+    ```
+    {
+      "presets": ["@babel/preset-env", "@babel/preset-react"]
+    }
+    ```
+    *remember that babel transpile code and not compile*
+
+[Example on babel](https://github.com/AlexanderPihl/4sem-fullstack-flow1/blob/main/Week4-25-02-2021/exercises/ReactWithoutCreateReactApp/webpack-tutorial/babel.config.json)
+
   - Webpack:
-    - is a module bundler that bundles your code into 1 or 2 files that you define. It also compiles TypeScript to JavaScript. You need a webpack config file to handle your configurations. 
+-  is a module bundler that bundles your code into 1 or 2 files that you define. It also compiles TypeScript to JavaScript. You need a webpack config file to handle your configurations.
+A webpack config file is written like: webpack.config.js. This file contains an entry point (where to start), an output(where to end and what to create). In between there are modules(rules for modules) and plugins(what to do with the overall code, the bundle).
+
+ [Example on a webpack file](https://github.com/AlexanderPihl/4sem-fullstack-flow1/blob/main/Week4-25-02-2021/exercises/ReactWithoutCreateReactApp/webpack-tutorial/webpack.config.js)
+
 
 ___
 ## Explain using sufficient code examples the following features in JavaScript (and node):
@@ -130,9 +146,35 @@ ___
   - [mymodule.js](https://github.com/AlexanderPihl/4sem-fullstack-flow1/blob/main/Week1-04-02-2021/mymodule.js)
 
 - **Provide examples and explain the es2015 features: let, arrow functions, this, rest parameters, destructuring objects and arrays,   maps/sets etc.**
- 
-  - **rest parameters**
-     is an improved way to handle function parameter, allowing us to more easily handle various input as parameters in a function. The rest parameter syntax allows us to represent an indefinite number of arguments as an array. With the help of a rest parameter a function can be called with any number of arguments, no matter how it was defined. Rest parameter is added in ES2015 or ES6 which improved the ability to handle parameter.
+
+  **Destructuring** is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. That is, we can extract data from arrays and objects and assign them to variables.
+      
+    ```JAVASCRIPT
+    // Before ES6
+    let introduction = ["Hello", "I" , "am", "Sarah"];
+    let greeting = introduction[0];
+    let name = introduction[3];
+
+    console.log(greeting);//"Hello"
+    console.log(name);//"Sarah"
+
+    // Basic Array Destructuring
+    let introduction = ["Hello", "I" , "am", "Sarah"];
+    let [greeting, pronoun] = introduction;
+
+    console.log(greeting);//"Hello"
+    console.log(pronoun);//"I"
+
+    // We can also do this with the same result.
+    let [greeting, pronoun] = ["Hello", "I" , "am", "Sarah"];
+
+    console.log(greeting);//"Hello"
+    console.log(pronoun);//"I"
+    ```
+
+    **rest parameters**
+      is an improved way to handle function parameter, allowing us to more easily handle various input as parameters in a function. The rest parameter syntax allows us to represent an indefinite number of arguments as an array. With the help of a rest parameter a function can be called with any number of arguments, no matter how it was defined. Rest parameter is added in ES2015 or ES6 which improved the ability to handle parameter.
+      
     ```JAVASCRIPT
     function functionname[...parameters]//... is the rest parameter
     {
@@ -152,6 +194,48 @@ ___
     console.log(fun(1,2,3,4,5)); //15  
     ```
 
+  **sets**
+  A collections of values. You can iterate through the elements of a set in insertion order. A value in the Set may only occur once; it is unique in the Sets collection.
+  ```JAVASCRIPT
+  // To initialize a set, we can pass an array of values to
+  // the Set constructor, this will create a Set with those values:
+
+  const confectioneries = new Set(['oreo', 'marshmallow','oreo', 'kitkat', 'gingerbread']);
+
+  console.log(confectioneries); // result: Set { 'oreo', 'marshmallow', 'kitkat', 'gingerbread' }
+
+  // In the snippet above, the duplicate value “oreo” is quietly removed from the Set and only unique values are returned.
+  ```
+  
+  **maps**
+
+  The Map object holds key-value pairs and remembers the original insertion order of the keys. Any value (both objects and primitive values) may be used as either a key or a value. A Map object iterates its elements in insertion order — a for...of loop returns an array of [key, value] for each iteration.
+  ```JAVASCRIPT
+  // create a Map using the Map constructor
+  const users = new Map();
+
+  console.log(users); // Map {}
+  ```
+  Key-value pairs are added to a Map using the set() method. This method takes in two arguments, the first being the key and the second, the value, which is referenced by the key
+  ```JAVASCRIPT
+  // Adding items
+  users.set('John Doe', {
+  email: 'johndoe@example.com',
+  });
+
+  users.set('Jane Doe', {
+	email: 'janedoe@example.com',
+  });
+
+  console.log(users);
+
+  /__ console.log result
+  Map {
+	'John Doe' => { email: 'johndoe@example.com'},
+	'Jane Doe' => { email: 'janedoe@example.com'} }
+  __/
+  ```
+<br>
 
 - **Provide an example of ES6 inheritance and reflect over the differences between Inheritance in Java and in ES6.**
   - asd
