@@ -130,7 +130,28 @@ ___
   - [mymodule.js](https://github.com/AlexanderPihl/4sem-fullstack-flow1/blob/main/Week1-04-02-2021/mymodule.js)
 
 - **Provide examples and explain the es2015 features: let, arrow functions, this, rest parameters, destructuring objects and arrays,   maps/sets etc.**
-  - asd
+ 
+  - **rest parameters**
+     is an improved way to handle function parameter, allowing us to more easily handle various input as parameters in a function. The rest parameter syntax allows us to represent an indefinite number of arguments as an array. With the help of a rest parameter a function can be called with any number of arguments, no matter how it was defined. Rest parameter is added in ES2015 or ES6 which improved the ability to handle parameter.
+    ```JAVASCRIPT
+    function functionname[...parameters]//... is the rest parameter
+    {
+      statement;
+    }
+
+    // es6 rest parameter
+    function fun(...input){
+        let sum = 0;
+        for(let i of input){
+            sum+=i;
+        }
+        return sum;
+    }
+    console.log(fun(1,2)); //3
+    console.log(fun(1,2,3)); //6
+    console.log(fun(1,2,3,4,5)); //15  
+    ```
+
 
 - **Provide an example of ES6 inheritance and reflect over the differences between Inheritance in Java and in ES6.**
   - asd
@@ -207,7 +228,7 @@ Explain about (ES-6) promises in JavaScript including, the problems they solve, 
   - Making of [myPromise.js](https://github.com/AlexanderPihl/4sem-fullstack-flow1/blob/main/Week3-18-02-2021/BeforeClass/promise-async-await-lecture/myPromise.js) used in [async1.js](https://github.com/AlexanderPihl/4sem-fullstack-flow1/blob/main/Week3-18-02-2021/BeforeClass/promise-async-await-lecture/async1.js)
 
 - **Example(s) that demonstrate error handling with promises**
-  - asd
+  - Using error handling with promis in [filterdir.js](https://github.com/AlexanderPihl/4sem-fullstack-flow1/blob/main/Week3-18-02-2021/DuringClass/filterdir.js)
   
 - **Example(s) that demonstrate how to execute asynchronous (promise-based) code in serial or parallel**
   - asd
@@ -220,8 +241,8 @@ Explain about (ES-6) promises in JavaScript including, the problems they solve, 
 - **Why this often is the preferred way of handling promise**
   - asd
   
--  **Error handling with async/await**
-  - asd
+- **Error handling with async/await**
+  - Using asyng/await in [ex1-d.js](https://github.com/AlexanderPihl/4sem-fullstack-flow1/blob/main/Week3-18-02-2021/exercises/ex1-d.js)
   
 - **Serial or parallel execution with async/await.**
   - Using both Serial & Parallel in [makeFolder.js](https://github.com/AlexanderPihl/4sem-fullstack-flow1/blob/main/Week3-18-02-2021/DuringClass/makeFolders.js)
