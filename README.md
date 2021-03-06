@@ -1,6 +1,11 @@
-### Alexander Pihl - 4. semester - Fullstack JavaScript
+## Alexander Pihl - 4. semester - Fullstack JavaScript
 ___
-
+### Group:
+- [Jean-Poul Leth-Møller](https://github.com/Jean-Poul)
+- [Mick Larsen](https://github.com/MivleDK/)
+- [Morten Rasmussen](https://github.com/Amazingh0rse)
+- [Per Kringelbach](https://github.com/cph-pk)
+___
 # Period-1 Vanilla JavaScript, Es-next, Node.js, Babel + Webpack and TypeScript-1
 
 ## Explain and Reflect
@@ -29,9 +34,9 @@ ___
   - npm is an online repository for the publishing of open-source Node.js projects and a command-line utility for interacting with said repository that aids in package installation, version management, and dependency management.
 
 - **Explain about the Event Loop in JavaScript, including terms like; blocking, non-blocking, event loop, callback queue and "other" API's. Make sure to include why this is relevant for us as developers.**
-  - The event loop continuously checks the call stack to see if there's any function that needs to run. While doing so, it adds any function call it finds to the call stack and executes each one in order.
-  - Heap - Objects are allocated in a heap which is just a name to denote a large mostly unstructured region of memory
-  - Stack - This represents the single thread provided for JavaScript code execution. Function calls form a stack of frames (more on this below)
+  - **The event loop** continuously checks the call stack to see if there's any function that needs to run. While doing so, it adds any function call it finds to the call stack and executes each one in order.
+  - **Heap** - Objects are allocated in a heap which is just a name to denote a large mostly unstructured region of memory
+  - **Stack** - This represents the single thread provided for JavaScript code execution. Function calls form a stack of frames (more on this below)
   - Any JavaScript code that takes too long to return back control to the event loop will block the execution of any JavaScript code in the page, even block the UI thread, and the user cannot click around, scroll the page, and so on.
   Almost all the I/O primitives in JavaScript are non-blocking. Network requests, Node.js filesystem operations, and so on. Being blocking is the exception, and this is why JavaScript is based so much on callbacks, and more recently on promises and async/await.
   - Browser or Web APIs are built into your web browser, and are able to expose data from the browser and surrounding computer environment and do useful complex things with it. They are not part of the JavaScript language itself, rather they are built on top of the core JavaScript language, providing you with extra superpowers to use in your JavaScript code.
