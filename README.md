@@ -122,7 +122,7 @@ ___
     - The map() method in JavaScript creates an array by calling a specific function on each element present in the parent array. Generally map() method is used to iterate over an array and calling function on every element of array.
   - Filter
     - asd
-  - Reduce([Example in code](https://github.com/AlexanderPihl/4sem-fullstack-flow1/blob/main/Week1-04-02-2021/exercises/3.js))
+  - Reduce ([Example in code](https://github.com/AlexanderPihl/4sem-fullstack-flow1/blob/main/Week1-04-02-2021/exercises/3.js))
     - asd
 
 - **Provide examples of user-defined reusable modules implemented in Node.js (learnynode - 6)**
@@ -224,4 +224,4 @@ Explain about (ES-6) promises in JavaScript including, the problems they solve, 
   - asd
   
 - **Serial or parallel execution with async/await.**
-  - asd
+  - Using both Serial & Parallel in [makeFolder.js](https://github.com/AlexanderPihl/4sem-fullstack-flow1/blob/main/Week3-18-02-2021/DuringClass/makeFolders.js)
